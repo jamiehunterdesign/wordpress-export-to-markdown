@@ -70,7 +70,7 @@ async function writeImageFilesPromise(posts, config) {
 	let delay = 0;
 	const payloads = posts.flatMap(post => {
 		const postPath = getPostPath(post, config);
-		const imagesDir = path.join(path.dirname(postPath), 'images');
+		const imagesDir = path.dirname(postPath);
 		return post.meta.imageUrls.map(imageUrl => {
 			const filename = shared.getFilenameFromUrl(imageUrl);
 			const payload = {
