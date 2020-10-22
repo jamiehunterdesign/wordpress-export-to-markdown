@@ -127,6 +127,8 @@ function getPostPath(post, config) {
 	let slugFragment = post.meta.slug;
 	if (config.prefixDate) {
 		slugFragment = dt.toFormat('yyyy-LL-dd') + '-' + slugFragment;
+		slugFragment = slugFragment.replace('-','');
+		slugFragment = slugFragment.replace('-','');
 	}
 
 	// use slug fragment as folder or filename as specified
