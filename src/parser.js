@@ -47,8 +47,8 @@ function collectPosts(data, config) {
 				imageUrls: []
 			},
 			frontmatter: {
-				title: getPostTitle(post),
-				date: getPostDate(post)
+				Title: getPostTitle(post),
+				Date: getPostDate(post)
 			},
 			content: translator.getPostContent(post, turndownService, config)
 		}));
